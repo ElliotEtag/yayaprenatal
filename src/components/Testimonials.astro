@@ -1,0 +1,47 @@
+---
+const testimonials = [
+  {
+    quote: "Meine Frauenärztin hat meine Schilddrüse nie gecheckt. Nina hat es sofort gefunden. Zum Glück.",
+    name: "— Maria K.",
+    tag: "Blutanalyse",
+  },
+  {
+    quote: "Ich hatte so viel Angst vor der Geburt. Nina hat mir nicht gesagt, was ich tun soll. Sie hat mir geholfen zu verstehen, woher die Angst kommt. Das hat alles verändert.",
+    name: "— Sophie L.",
+    tag: "Coaching",
+  },
+  {
+    quote: "Endlich jemand, der sich wirklich Zeit nimmt. 75 Minuten nur für mich. Ich habe mich zum ersten Mal wirklich gehört gefühlt in dieser Schwangerschaft.",
+    name: "— Lena M.",
+    tag: "Begleitung",
+  },
+];
+---
+
+<section class="bg-deep py-16 md:py-24 px-4 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-blush text-xs uppercase tracking-widest font-sans mb-4">
+      Stimmen
+    </p>
+
+    <h2 class="font-serif text-[28px] md:text-[40px] font-light text-cream mb-12">
+      Was Mamas sagen.
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {testimonials.map((t) => (
+        <div class="p-5 md:p-7 bg-white/[0.06] rounded-lg border-l-[3px] border-terra flex flex-col">
+          <p class="text-[9px] tracking-widest uppercase text-terra font-medium mb-3">
+            {t.tag}
+          </p>
+          <p class="font-serif text-[15px] md:text-base font-light italic text-cream leading-[1.7] flex-1 mb-4">
+            &bdquo;{t.quote}&ldquo;
+          </p>
+          <p class="text-[12px] text-blush tracking-wider">
+            {t.name}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

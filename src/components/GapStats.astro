@@ -1,0 +1,59 @@
+---
+const stats = [
+  {
+    num: "10",
+    unit: "Minuten",
+    text: "So lange dauert ein durchschnittlicher Frauenarzt-Termin. Für Blutdruck, Ultraschall, kurze Frage — fertig.",
+    accent: "border-red-600",
+    numColor: "text-red-600",
+  },
+  {
+    num: "12",
+    unit: "Marker",
+    text: "Zwölf kritische Blutwerte — von Schilddrüse bis Leber — werden im Mutterpass nie getestet. Nie.",
+    accent: "border-terra",
+    numColor: "text-terra",
+  },
+  {
+    num: "0",
+    unit: "Minuten",
+    text: "Für deine Ängste, deine Fragen, dein inneres Erleben. Emotionale Vorbereitung? Nicht Teil der Standardvorsorge.",
+    accent: "border-deep",
+    numColor: "text-deep",
+  },
+];
+---
+
+<section class="bg-pearl py-16 md:py-24 px-4 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-[12px] tracking-[3px] uppercase text-terra mb-4 font-medium">
+      Die Lücke
+    </p>
+
+    <h2 class="font-serif text-[28px] md:text-[48px] font-light leading-[1.2] text-deep mb-4">
+      Was die Standardvorsorge<br />
+      <em class="italic text-terra">nicht sieht.</em>
+    </h2>
+
+    <p class="text-sm md:text-base text-subtle font-light leading-[1.7] max-w-[540px] mb-10 md:mb-14">
+      Standardvorsorge ist gut. Aber sie zeigt dir nicht alles. Zwischen den kurzen Arztterminen
+      bleiben Fragen offen — über deinen Körper und über dich.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+      {stats.map((stat) => (
+        <div class={`p-6 md:p-8 bg-cream rounded border-t-[3px] ${stat.accent}`}>
+          <div class={`font-serif text-[48px] md:text-[56px] font-light leading-none ${stat.numColor}`}>
+            {stat.num}
+          </div>
+          <div class="text-[13px] font-semibold text-ink mt-1 mb-3">
+            {stat.unit}
+          </div>
+          <p class="text-[14px] leading-[1.7] text-subtle font-light">
+            {stat.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

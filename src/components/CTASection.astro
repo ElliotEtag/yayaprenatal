@@ -1,0 +1,40 @@
+---
+const contacts = [
+  { label: "Email", value: "hallo@yayaprenatal.de" },
+  { label: "Telefon", value: "+49 30 XXX XXXX" },
+  { label: "Adresse", value: "Kollwitzplatz, Prenzlauer Berg" },
+];
+---
+
+<section id="kontakt" class="bg-cream py-16 md:py-24 px-4 md:px-12 text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="font-serif text-[32px] md:text-[52px] font-light text-deep mb-5 leading-[1.2]">
+      Bereit für <em class="italic text-terra">mehr</em>?
+    </h2>
+
+    <p class="text-base leading-[1.7] text-subtle font-light mb-5">
+      Dein kostenloses Erstgespräch dauert 20 Minuten. Wir lernen uns kennen und schauen, ob die
+      Begleitung zu dir passt.
+    </p>
+
+    <p class="text-[13px] text-subtle font-light opacity-70 mb-10">
+      Kein Verkaufsgespräch. Kein Druck. Nur ein ehrliches Kennenlernen.
+    </p>
+
+    <a
+      href="mailto:hallo@yayaprenatal.de"
+      class="inline-block px-12 py-[18px] bg-terra text-pearl text-[13px] tracking-[2px] uppercase font-medium no-underline hover:bg-deep transition-colors duration-300"
+    >
+      Jetzt Erstgespräch Buchen
+    </a>
+
+    <div class="mt-12 flex justify-center gap-6 md:gap-12 flex-wrap">
+      {contacts.map((c) => (
+        <div class="text-center">
+          <p class="text-[10px] tracking-widest uppercase text-terra mb-1">{c.label}</p>
+          <p class="text-[14px] text-ink">{c.value}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

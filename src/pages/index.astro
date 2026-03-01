@@ -1,17 +1,56 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import GapStats from '../components/GapStats.astro';
+import BabyFirst from '../components/BabyFirst.astro';
+import BodyMap from '../components/BodyMap.tsx';
+import CoachingSection from '../components/CoachingSection.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Packages from '../components/Packages.astro';
+import Journey from '../components/Journey.astro';
+import AboutNina from '../components/AboutNina.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTASection from '../components/CTASection.astro';
+import Disclaimer from '../components/Disclaimer.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Header />
+  <main>
+    <Hero />
+    <GapStats />
+    <BabyFirst />
+
+    <!-- Body Map: React island with client-side hydration -->
+    <section class="py-20 md:py-28 px-4 md:px-12 overflow-hidden relative" style="background: linear-gradient(180deg, #FFFCF9 0%, #F7F3EE 50%, #FFFCF9 100%);">
+      <!-- Decorative accent line -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[60px] h-[3px] bg-terra rounded-sm"></div>
+
+      <div class="text-center mb-8 md:mb-12">
+        <p class="text-[12px] tracking-[3px] uppercase text-terra mb-4 font-medium">
+          Dein Körper-Check
+        </p>
+        <h2 class="font-serif text-[28px] md:text-[52px] font-light leading-[1.2] text-deep mb-3">
+          Was wir in deinem Blut lesen.
+        </h2>
+        <p class="text-sm md:text-base text-subtle font-light max-w-[520px] mx-auto leading-[1.6]">
+          22 Marker. 14 davon testet deine Frauenärztin nicht. Klick auf einen Bereich und erfahre, warum er wichtig ist.
+        </p>
+      </div>
+
+      <BodyMap client:visible />
+    </section>
+
+    <CoachingSection />
+    <HowItWorks />
+    <Packages />
+    <Journey />
+    <AboutNina />
+    <Testimonials />
+    <CTASection />
+    <Disclaimer />
+  </main>
+  <Footer />
+</BaseLayout>
