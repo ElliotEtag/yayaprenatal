@@ -3,7 +3,7 @@ const stats = [
   {
     num: "10",
     unit: "Minuten",
-    text: "So lange dauert ein durchschnittlicher Frauenarzt-Termin. Für Blutdruck, Ultraschall, kurze Frage — fertig.",
+    text: "So lange dauert ein durchschnittlicher Frauenarzt-Termin. Für dich als Mensch bleibt da keine Zeit.",
     accent: "border-red-600",
     numColor: "text-red-600",
   },
@@ -40,7 +40,7 @@ const stats = [
       bleiben Fragen offen — über deinen Körper und über dich.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-14">
       {stats.map((stat) => (
         <div class={`p-6 md:p-8 bg-cream rounded border-t-[3px] ${stat.accent}`}>
           <div class={`font-serif text-[48px] md:text-[56px] font-light leading-none ${stat.numColor}`}>
@@ -54,6 +54,30 @@ const stats = [
           </p>
         </div>
       ))}
+    </div>
+
+    <div class="max-w-[540px] space-y-6">
+      <div class="flex gap-4 items-start">
+        <span class="text-deep font-serif text-lg leading-none mt-1 shrink-0">01</span>
+        <div>
+          <p class="font-sans font-semibold text-deep text-sm">Deine Ärztin sieht dein Baby.</p>
+          <p class="text-[14px] leading-[1.7] text-subtle font-light">Ultraschall, Blutdruck, Mutterpass — kurze Termine, medizinische Grundversorgung.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <span class="text-deep font-serif text-lg leading-none mt-1 shrink-0">02</span>
+        <div>
+          <p class="font-sans font-semibold text-deep text-sm">Deine Hebamme begleitet die Geburt.</p>
+          <p class="text-[14px] leading-[1.7] text-subtle font-light">Geburtsvorbereitung, Atemtechniken, Wochenbett.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <span class="text-terra font-serif text-lg leading-none mt-1 shrink-0">03</span>
+        <div>
+          <p class="font-sans font-semibold text-terra text-sm">Yaya sieht dich.</p>
+          <p class="text-[14px] leading-[1.7] text-subtle font-light">Erweiterte Blutanalyse, Ernährung & Supplements nach deinen Werten, systemisches Coaching — kein Zeitdruck.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
