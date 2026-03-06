@@ -124,14 +124,14 @@ const dialogues = [
   }
 
   // Auto-advance every 5 seconds
-  interval = setInterval(nextSlide, 5000);
+  interval = setInterval(nextSlide, 7000);
 
   // Click on dots to navigate
   dots.forEach((dot) => {
     dot.addEventListener('click', () => {
       clearInterval(interval);
       showSlide(Number((dot as HTMLElement).dataset.index));
-      interval = setInterval(nextSlide, 5000);
+      interval = setInterval(nextSlide, 7000);
     });
   });
 </script>
