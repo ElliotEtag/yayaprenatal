@@ -113,7 +113,7 @@ export default function BodyMap() {
           Was wir in deinem Blut lesen.
         </h2>
         <p className="text-sm md:text-base text-[#7A6B60] font-light max-w-lg mx-auto leading-relaxed">
-          22 Marker. 14 davon testet deine Frauenärztin nicht. Klick auf einen Bereich und erfahre, warum er wichtig ist.
+          22 Marker. 18 davon testet deine Frauenärztin nicht. Die anderen 4 schon — aber isoliert, ohne das volle Bild. Klick auf einen Bereich und erfahre, warum er wichtig ist.
         </p>
       </div>
 
